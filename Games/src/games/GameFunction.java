@@ -9,6 +9,8 @@ package games;
  *
  * @author Usuario
  */
-public class NewClass {
-    
+public interface GameFunction 
+{
+    public void iniciar ();
+    public Stat getStats();
 }
