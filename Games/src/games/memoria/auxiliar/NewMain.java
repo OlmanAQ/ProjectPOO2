@@ -1,22 +1,22 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package games;
+package games.memoria.auxiliar;
 
 import java.util.Random;
 
 /**
  *
- * @author Usuario
+ * @author Dark
  */
-public class Games {
+public class NewMain {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        // TODO code application logic here
         int[] numbers = new int[16];
         int count = 0;
         
@@ -40,7 +40,4 @@ public class Games {
             System.out.print(numbers[i]+" ");
         }
     }
-        
-    
-    
 }

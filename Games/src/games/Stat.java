@@ -14,12 +14,20 @@ class Stat {
     private String nombre;
     private int valor;
 
+    
+    /**
+     * 
+     * @param clave
+     * @param nombre
+     * @param valor 
+     */
     public Stat(String clave, String nombre, int valor) {
         this.clave = clave;
         this.nombre = nombre;
         this.valor = valor;
     }
 
+    
     public String getClave() {
         return clave;
     }
