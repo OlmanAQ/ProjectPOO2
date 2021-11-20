@@ -8,7 +8,8 @@ import java.util.Random;
 
 /**
  *
- * @author Dark
+ * @author Olman Acuña
+ * @author Noelia Sandoval
  */
 public class LogicaJuego {
     
