@@ -112,7 +112,7 @@ public class PrincipalP extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        PlayGame iG = new PlayGame();
+        PlayGame iG = PlayGame.getInstance();
         this.jDesktopPane1.add(iG);
         iG.show();
     }//GEN-LAST:event_jButton2ActionPerformed

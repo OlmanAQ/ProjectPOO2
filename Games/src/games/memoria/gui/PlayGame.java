@@ -6,6 +6,7 @@
 package games.memoria.gui;
 
 import games.memoria.auxiliar.LogicaJuego;
+import games.GameFunction;
 import java.awt.BorderLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -26,6 +27,9 @@ public class PlayGame extends javax.swing.JInternalFrame {
     private JButton[] pbtn = new JButton[2];
     private boolean primerc = false;
     private int puntaje = 0;
+    
+    private static PlayGame instance;
+    
     /**
      * Creates new form PlayGame1
      */
@@ -36,6 +40,15 @@ public class PlayGame extends javax.swing.JInternalFrame {
         add(fondo, BorderLayout.CENTER);
         setCards();
     }
+
+    public static PlayGame getInstance() {
+        if(instance==null){
+            instance = new PlayGame(); 
+        }
+        return instance;
+    }
+    
+    
     
     private void setCards() {
         int[] numbers = log.getCardNumbers();
