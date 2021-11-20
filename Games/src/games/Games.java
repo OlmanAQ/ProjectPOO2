@@ -39,8 +39,14 @@ public class Games {
         for (int i = 0; i < 16; i++) {
             System.out.print(numbers[i]+" ");
         }
-    }
         
+        
+        PrincipalP vP = new PrincipalP();
+        vP.setVisible(true);
+    }
+    
+
+    
     
     
 }

@@ -9,7 +9,7 @@ package games;
  *
  * @author Usuario
  */
-class Stat {
+public class Stat {
     private String clave;
     private String nombre;
     private int valor;

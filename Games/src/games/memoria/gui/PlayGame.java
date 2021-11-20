@@ -7,6 +7,7 @@ package games.memoria.gui;
 
 import games.memoria.auxiliar.LogicaJuego;
 import games.GameFunction;
+import games.Stat;
 import java.awt.BorderLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -16,7 +17,7 @@ import javax.swing.JOptionPane;
  *
  * @author Usuario
  */
-public class PlayGame extends javax.swing.JInternalFrame {
+public class PlayGame extends javax.swing.JInternalFrame implements GameFunction{
 
     
     private VFondo fondo;
@@ -38,7 +39,7 @@ public class PlayGame extends javax.swing.JInternalFrame {
         
         fondo = new VFondo(getWidth(), getHeight());
         add(fondo, BorderLayout.CENTER);
-        setCards();
+        iniciar();
     }
 
     public static PlayGame getInstance() {
@@ -48,7 +49,33 @@ public class PlayGame extends javax.swing.JInternalFrame {
         return instance;
     }
     
-    
+     @Override
+    public void iniciar() {
+        int[] numbers = log.getCardNumbers();
+        
+        btnC1.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[0]+".png")));
+        btnC2.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[1]+".png")));
+        btnC3.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[2]+".png")));
+        btnC4.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[3]+".png")));
+        btnC5.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[4]+".png")));
+        btnC6.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[5]+".png")));
+        btnC7.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[6]+".png")));
+        btnC8.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[7]+".png")));
+        btnC9.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[8]+".png")));
+        btnC10.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[9]+".png")));
+        btnC11.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[10]+".png")));
+        btnC12.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[11]+".png")));
+        btnC13.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[12]+".png")));
+        btnC14.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[13]+".png")));
+        btnC15.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[14]+".png")));
+        btnC16.setDisabledIcon(new ImageIcon(getClass().getResource("../imagenes/c"+numbers[15]+".png")));
+
+    }
+
+    @Override
+    public Stat getStats() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     private void setCards() {
         int[] numbers = log.getCardNumbers();
@@ -699,4 +726,6 @@ public class PlayGame extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnReiniciar;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+   
 }
